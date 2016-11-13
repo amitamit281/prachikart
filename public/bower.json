@@ -1,0 +1,25 @@
+{
+  "name": "bower.json",
+  "homepage": "https://github.com/amitamit281/prachikart",
+  "authors": [
+    "amitamit281 <amitamit281@rediffmail.com>"
+  ],
+  "description": "Prachi Kart",
+  "main": "bower.json",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "angular": "angularjs#^1.5.8",
+    "underscore": "^1.8.3",
+    "bootstrap": "^3.3.7",
+    "angular-route": "^1.5.8"
+  }
+}
