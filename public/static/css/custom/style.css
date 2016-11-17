@@ -2,6 +2,15 @@
 
  body { background: #333 url("http://codepen.io/images/classy_fabric.png"); }
 
+ .row
+ {
+ 	margin: 0px;
+ }
+ .padding-0
+ {
+ 	padding: 0px;
+ }
+
 .slides {
     padding: 0;
     width: 609px;
@@ -144,7 +153,7 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
 }
 .page-content
 {
-	
+	color: white;
 }
 .color-white
 {

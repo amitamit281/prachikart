@@ -6,11 +6,16 @@ zoombeiApp.config(function($routeProvider) {
 	$routeProvider.when('/index', {
 		templateUrl : 'views/main.html',
 		controller : 'mainCtrl'		
-	}).when('/aboutus', {
+	}).when('/about', {
+		templateUrl : 'views/about.html',
+		controller : 'mainCtrl'		
+	}).when('/home', {
 		templateUrl : 'views/main.html',
 		controller : 'mainCtrl'		
-	}).when('/services', {
-		templateUrl : 'views/main.html',
+	});.when('/services', {
+		templateUrl : 'views/services.html',
 		controller : 'mainCtrl'		
 	});
+	
+
 });
