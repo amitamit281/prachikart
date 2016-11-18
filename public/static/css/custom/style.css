@@ -185,19 +185,11 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
 	color: white!important;
 }
 
-/*@media (max-width: 1020px) and (min-width: 768px)
-
-.container {
-    width: 724px;
+.footer
+{
+	padding: 20px;
 }
-.page-content {
-    padding-top: 35px;
+.social i
+{
+	padding-right: 15px;
 }
-.container {
-    width: 1170px;
-    margin: 0 auto;
-    position: relative;
-}
-.page-content {
-    line-height: 1.75em;
-}*/

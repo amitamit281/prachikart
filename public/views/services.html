@@ -1,80 +1,24 @@
-<!-- <div class="section-header">
-        <h3 class="hidden-xxs">Experience 5 Wonders</h3>
-        <p class="description">
-            
-        </p>
+
+    <div ng-controller="service-controller" class="col-md-12 col-xs-12 col-sm-12">
+      
+  <div class="container">
+
+    <div class="tiles">
+
+      <div class="tile-row">
+
+        <div ng-repeat="title in vm.titles"> <div class="{{title.tileSize}} tile" ng-style="{'background-image':'url(http://farm' + title.farm + '.static.flickr.com/' + title.server + '/' + title.id + '_' + title.secret + '_z.jpg)'}">
+          <div class="tile-caption">
+            <header>
+              {{title.titleCaption}}
+              <span class="glyphicon glyphicon-collapse-up tile-arrow-up"></span>
+            </header>
+            {{title.titleContent}}
+          </div>
+        </div>
       </div>
-      <div class="section-body">
-        <div class="cards-container wonder-cards-container">
-                        <div class="wonder-card">
-              <div class="img-wrapper" style="background-image: url(/uploads/thumbs/59cf9e1c18e97defc7937645a55a3c1507e0619d-8a8e6.jpg)">
-  <a href="http://indonesia.travel/en/experience/natural"></a>
-</div>
-<div class="header" style="background-image: linear-gradient(90deg, #0085cd 0%, #6cb42c);">
-  <img src="/uploads/wonders-seed/patterns/pattern-natural.png">
-  <div class="title">
-    <a href="http://indonesia.travel/en/experience/natural">Natural</a>
-  </div>
-  <div class="subtitle">
-    Wonders
-  </div>
-</div>
-            </div>
-                        <div class="wonder-card">
-              <div class="img-wrapper" style="background-image: url(/uploads/thumbs/5a56a1e5aed92bb2121ba08babc855eb5867613b-59cd7.jpg)">
-  <a href="http://indonesia.travel/en/experience/sensory"></a>
-</div>
-<div class="header" style="background-image: linear-gradient(90deg, #d5337c 0%, #6e509c);">
-  <img src="/uploads/wonders-seed/patterns/pattern-sensory.png">
-  <div class="title">
-    <a href="http://indonesia.travel/en/experience/sensory">Sensory</a>
-  </div>
-  <div class="subtitle">
-    Wonders
-  </div>
-</div>
-            </div>
-                        <div class="wonder-card">
-              <div class="img-wrapper" style="background-image: url(/uploads/thumbs/02ed800b40053d970f82fd4489de11b80908d127-e34b5.jpg)">
-  <a href="http://indonesia.travel/en/experience/cultural"></a>
-</div>
-<div class="header" style="background-image: linear-gradient(90deg, #ffed00 0%, #ef7e31);">
-  <img src="/uploads/wonders-seed/patterns/pattern-cultural.png">
-  <div class="title">
-    <a href="http://indonesia.travel/en/experience/cultural">Cultural</a>
-  </div>
-  <div class="subtitle">
-    Wonders
-  </div>
-</div>
-            </div>
-                        <div class="wonder-card">
-              <div class="img-wrapper" style="background-image: url(/uploads/thumbs/5fe897bfe0613179d0d975778c6b8d38ea047b60-bfdda.jpg)">
-  <a href="http://indonesia.travel/en/experience/modern"></a>
-</div>
-<div class="header" style="background-image: linear-gradient(90deg, #6e509c 0%, #0085cd);">
-  <img src="/uploads/wonders-seed/patterns/pattern-modern.png">
-  <div class="title">
-    <a href="http://indonesia.travel/en/experience/modern">Modern</a>
-  </div>
-  <div class="subtitle">
-    Wonders
-  </div>
-</div>
-            </div>
-                        <div class="wonder-card">
-              <div class="img-wrapper" style="background-image: url(/uploads/thumbs/c4bc25a6352d0d55c60128adb9f6f6c04bc72ad1-d1471.jpg)">
-  <a href="http://indonesia.travel/en/experience/adventure"></a>
-</div>
-<div class="header" style="background-image: linear-gradient(90deg, #ef7e31 0%, #d5337c);">
-  <img src="/uploads/wonders-seed/patterns/pattern-adventurous.png">
-  <div class="title">
-    <a href="http://indonesia.travel/en/experience/adventure">Adventure</a>
-  </div>
-  <div class="subtitle">
-    Wonders
-  </div>
-</div>
-            </div>
-                    </div>
-      </div> -->
+
+
+    </div>
+
+    </div></div></div>
