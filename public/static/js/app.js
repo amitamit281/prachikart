@@ -12,5 +12,8 @@ zoombeiApp.config(function($routeProvider) {
 	}).when('/home', {
 		templateUrl : 'views/main.html',
 		controller : 'mainCtrl'		
+	}).when('/services', {
+		templateUrl : 'views/services.html',
+		controller : 'mainCtrl'		
 	});
 });
