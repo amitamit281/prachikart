@@ -1,33 +1,25 @@
 
-   app = angular.module('zoombie', ['restangular']);
 
+ 
+   zoombeiApp.controller('service-controller',function(network,$scope)
+   {
+    network.get("https://www.flickr.com/cameraroll").then(function(success){
+
+                            if(!success){
+                                $scope.success = false;
+                                $scope.message = "No record found.";
+                            }else{                              
+                                $scope.commissionrates=success.content;                             
+                                $scope.totalElements=success.totalElements;
+                                $scope.numberOfElements=success.numberOfElements;
+                                
+                            }
+                            
+                            },function(failure){
+                                    $scope.success = false;
+                                    $scope.message = "We are experiencing some error. Try Again!";
+                                }
+                                
+                              ); 
+   }); 
 // Configure the application
-app.config(function(RestangularProvider) {
-  RestangularProvider.setBaseUrl(
-    'http://angularized.getsandbox.com');
-  // Note that we run everything on the localhost
-});
-
-// Define the controller
-app.controller('service-controller', function($scope, Restangular) {
-  var vm = this;
-  Restangular.all('titles').getList().then(function(result) {
-    vm.titles = result;
-  });
-});
-
-// Standardize data format (extract from meta-data where needed)
-app.config(function(RestangularProvider) {
-  // add a response intereceptor
-  RestangularProvider.addResponseInterceptor(function(data, operation, what, url, response, deferred) {
-    var extractedData;
-    // .. to look for getList operations
-    if (operation === "getList") {
-      // .. and handle the data and meta data
-      extractedData = data.photoset.photo;
-    } else {
-      extractedData = data;
-    }
-    return extractedData;
-  });
-});

@@ -1,24 +1,11 @@
-
-    <div ng-controller="service-controller" class="col-md-12 col-xs-12 col-sm-12">
-      
-  <div class="container">
-
-    <div class="tiles">
-
-      <div class="tile-row">
-
-        <div ng-repeat="title in vm.titles"> <div class="{{title.tileSize}} tile" ng-style="{'background-image':'url(http://farm' + title.farm + '.static.flickr.com/' + title.server + '/' + title.id + '_' + title.secret + '_z.jpg)'}">
-          <div class="tile-caption">
-            <header>
-              {{title.titleCaption}}
-              <span class="glyphicon glyphicon-collapse-up tile-arrow-up"></span>
-            </header>
-            {{title.titleContent}}
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-
-    </div></div></div>
+  <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row margin-0">
+                <div class="col-md-12" ng-controller="service-controller">
+                  <div>{{success}}</div>
+                  <div>{{message}}</div>
+                  <div>{{commisionrates}}</div>
+                  <div>{{totalElements}}</div>
+                  <div>{{numberOfElements}}</div>
+                </div>
+                </div></div>
