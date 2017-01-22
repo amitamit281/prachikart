@@ -159,6 +159,10 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
 {
 	color: #000000!important;
 }
+.color-white
+{
+    color: white;
+}
 .navbar-brand
 {
 	color: #000000 !important;

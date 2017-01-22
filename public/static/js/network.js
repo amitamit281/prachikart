@@ -7,7 +7,7 @@ zoombeiApp.factory('network', function($http, $rootScope, $q, API_URI) {
         get : function(endpoint, params,headers) {
             //$rootScope.showloader= true;
             var deferred = $q.defer();
-            var api_url = API_URI + endpoint;
+            var api_url = endpoint;
             console.log("Enter: " + api_url);
             var localHeaders = {"Content-Type" : "application/json"};
             if (headers != null)
