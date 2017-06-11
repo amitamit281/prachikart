@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #333333;
+    color: #fff!important;
     background-color: #20B2AA;
     overflow-x: hidden!important;
 }
 
-
+table{color:#fff;}
 .navbar{
 	min-height: 40px;
 }

@@ -5,6 +5,46 @@
     <title>Title</title>
 </head>
 <body>
+<div class="row">
+    <div class="col-md-4" style="color:#fff">Name Filter
+        <input ng-model="filterParams.nameSearch" placeholder="Name "/></div>
 
+    <div class="col-md-4" style="color:#fff">Sort Order
+        <select class="btn btn-default dropdown-toggle" ng-model="filterParams.order">
+            <!--<option value="" selected>Select</option>-->
+            <option value="name">Name</option>
+            <option value="list">List</option>
+            <option value="price">Price</option>
+        </select>
+    </div>
+    <div class="col-md-4" style="color:#fff"> Price Range
+        <select class="btn btn-default dropdown-toggle" id="priceRange">
+            <option ng-change="byPriceRange('price', filterParams.priceRange)" ng-repeat="opt in priceRangeOptions"
+                    ng-model="filterParams.priceRange" ng-value="opt">{{opt.start}}-{{opt.end}}
+            </option>
+        </select></div>
+
+    <div class="col-md-12">
+    <table class="table table-responsive">
+        <thead>
+        <tr>
+            <th class="col-md-6">Name</th>
+            <th class="col-md-3">List</th>
+            <th class="col-md-3">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+        <tr ng-repeat="item in filteredList | filter: byPriceRange('price', filterParams.priceRange)">
+            <td class="col-md-6">{{item.name}}</td>
+            <td class="col-md-3"> {{item.list}}</td>
+            <td class="col-md-3">{{item.price}}</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
 </body>
+
+
 </html>
