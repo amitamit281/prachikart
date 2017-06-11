@@ -29,8 +29,19 @@ zoombeiApp.controller('product', function ($scope, $filter) {
     $scope.priceRangeOptions = [
         {start: 100, end: 200},
         {start: 200, end: 300},
-        {start: 300, end: 400}
+        {start: 300, end: 400},
+        {start: 400, end: 500},
+        {start: 500, end: 600},
+        {start: 600, end: 700},
+        {start: 700, end: 800},
+        {start: 800, end: 900},
+        {start: 900, end: 1000}
     ];
+
+    $scope.priceRangeDisplayOptions = [
+        '100 - 200', '200 - 300', '300 - 400'
+    ];
+
 
     $scope.updateFilter = function () {
         var filtered;
@@ -44,26 +55,26 @@ zoombeiApp.controller('product', function ($scope, $filter) {
         $scope.updateFilter();
     });
     $scope.updateFilter();
-
-    $scope.byPriceRange = function(fieldName, priceRange) {
-        var selectedStartRange = priceRange.start, selectedEndRange = priceRange.end;
+    $scope.filterByPriceRange = function() {
+        var modelIndex = $scope.priceRangeDisplayOptions.indexOf($scope.priceRange);
+        var selectedStartRange = $scope.priceRangeOptions[modelIndex].start, selectedEndRange = $scope.priceRangeOptions[modelIndex].end;
         if(selectedStartRange ===0 && selectedEndRange === 0) {
             return;
         }
         return function predicateFunc(obj) {
-            return selectedStartRange <= obj[fieldName] && obj[fieldName] <= selectedEndRange;
+            return selectedStartRange <= obj['price'] && obj['price'] <= selectedEndRange;
         };
     };
 
-
-    //////////////////////////sort end///////////////
-
-
-        ///////////range////////////////
-
-        // $scope.init();
-
-
+    // $scope.byPriceRange = function(fieldName, priceRange) {
+    //     var selectedStartRange = priceRange.start, selectedEndRange = priceRange.end;
+    //     if(selectedStartRange ===0 && selectedEndRange === 0) {
+    //         return;
+    //     }
+    //     return function predicateFunc(obj) {
+    //         return selectedStartRange <= obj[fieldName] && obj[fieldName] <= selectedEndRange;
+    //     };
     // };
+
 });
 

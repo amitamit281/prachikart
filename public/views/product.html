@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-md-4" style="color:#fff">Name Filter
+    <div class="col-md-4" style="color:#fff">Search Category
         <input ng-model="filterParams.nameSearch" placeholder="Name "/></div>
 
     <div class="col-md-4" style="color:#fff">Sort Order
@@ -18,32 +18,64 @@
         </select>
     </div>
     <div class="col-md-4" style="color:#fff"> Price Range
-        <select class="btn btn-default dropdown-toggle" id="priceRange">
-            <option ng-change="byPriceRange('price', filterParams.priceRange)" ng-repeat="opt in priceRangeOptions"
-                    ng-model="filterParams.priceRange" ng-value="opt">{{opt.start}}-{{opt.end}}
-            </option>
-        </select></div>
+        <!--<select class="btn btn-default dropdown-toggle" id="priceRange"-->
+                <!--ng-options="opt as opt for opt in priceRangeDisplayOptions" ng-change="filterByPriceRange()"-->
+                <!--ng-model="priceRange">-->
+<select  class="btn btn-default dropdown-toggle" id="priceRange" ng-options="opt as opt for opt in priceRangeDisplayOptions" ng-change="filterByPriceRange()" ng-model="priceRange">
+</select>
+        </select>
+    </div>
 
     <div class="col-md-12">
-    <table class="table table-responsive">
-        <thead>
-        <tr>
-            <th class="col-md-6">Name</th>
-            <th class="col-md-3">List</th>
-            <th class="col-md-3">Price</th>
-        </tr>
-        </thead>
-        <tbody>
+        <table class="table table-responsive">
+            <thead>
+            <tr>
+                <th class="col-md-6">Name</th>
+                <th class="col-md-3">List</th>
+                <th class="col-md-3">Price</th>
+            </tr>
+            </thead>
+            <tbody>
 
 
-        <tr ng-repeat="item in filteredList | filter: byPriceRange('price', filterParams.priceRange)">
-            <td class="col-md-6">{{item.name}}</td>
-            <td class="col-md-3"> {{item.list}}</td>
-            <td class="col-md-3">{{item.price}}</td>
-        </tr>
-        </tbody>
-    </table>
+            <tr ng-repeat="item in filteredList | filter: byPriceRange('price', filterParams.priceRange)">
+                <td class="col-md-6">{{item.name}}</td>
+                <td class="col-md-3"> {{item.list}}</td>
+                <td class="col-md-3">{{item.price}}</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+</div>
+
+<!--<p>Name Filter</p>-->
+<!--<input ng-model="filterParams.nameSearch" placeholder = "Name " />-->
+
+<!--<p>Sort Order</p>-->
+<!--<select id="priceRange" ng-options="opt as opt for opt in priceRangeDisplayOptions" ng-change="filterByPriceRange()" ng-model="priceRange">-->
+<!--</select>-->
+<!--<select ng-model="filterParams.order">-->
+
+    <!--<option value="name">Name</option>-->
+    <!--<option value="list">List</option>-->
+    <!--<option value="price">Price</option>-->
+<!--</select>-->
+<!--<table class="table">-->
+    <!--<thead>-->
+    <!--<tr><th class="col-md-6">Name</th><th class="col-md-3">List</th><th class="col-md-3">Price</th></tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+
+
+    <!--<tr ng-repeat = "item in filteredList">-->
+        <!--<td class="col-md-6">{{item.name}}</td>-->
+        <!--<td class="col-md-3"> {{item.list}}</td>-->
+        <!--<td class="col-md-3">{{item.price}}</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+<!--</table>-->
+
+
 </body>
 
 
