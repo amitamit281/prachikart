@@ -1,7 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
- body { background: #333 url("http://codepen.io/images/classy_fabric.png"); }
+ body {
+     background: #D9EFFE url("http://codepen.io/images/classy_fabric.png");
+     font-family: 'Raleway';}
 
+h2{font-family: Raleway;}
  .row
  {
  	margin: 0px;
@@ -22,14 +25,15 @@
 95% { left: -300%; }
 100% { left: -400%; }
 }
-
-body { margin: 0;color: #fff!important; font-family: 'Source Sans Pro', sans-serif;}
+body { margin: 0;color: #fff!important; }
 div#slider { overflow: hidden;
     position: relative;height: 500px;}
 .reservation{position: absolute;
-    left:4%;top:69%;background: rgba(255, 255, 255, 0.27);width: 90%;padding: 1%}
+    left:4%;top:65%;background: rgba(255, 255, 255, 0.27);width: 90%;padding: 1%}
 div#slider figure img { width: 20%; float: left;height: 500px; }
-.form-group > input,select,button {
+.form-head{position: absolute;
+    top:55%;text-align: center;left: 31%;}
+.form-group > input,select {
     appearance: none;
     width: 100%;
     margin: 0 15px;
@@ -56,6 +60,7 @@ div#slider figure {
 	height: 50px;
 	width: 100px;
 }
+.fa:hover{color:#2ea19e;}
 .color-blue
 {
 	background-color: #20B2AA !important;
@@ -76,6 +81,7 @@ div#slider figure {
 {
 	color: white!important;
 }
+.dropdown-menu>li>a{color: #000000 !important;}
 .nav>li>a
 {
 	color: #000000 !important;
@@ -102,6 +108,34 @@ div#slider figure {
 {
 	padding-right: 15px;
 }
+.text-center{text-align: center}
 .margin-8{margin:8%;}
 .navbar{margin-bottom: 0px;}
 .margin-top-14{margin-top: 14%;}
+.card-block{padding:1.25em;}
+.breif{margin-top: 12px;padding: 3%;color: #6d6d6d;}
+.card > img{margin-bottom: 3%;}
+.features{    background-color:  rgb(162, 107, 126);font-family: sans-serif;}
+.trusted > div {
+    /*color: #8e8e8e;*/
+    text-align: center;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1em;
+    line-height: 1.5em;
+    /*background-color: #fff;*/
+    color: #00b3ee;
+    padding: 2%;
+}
+.trusted > h2 {color: #00689c;}
+
+/*----------Responsive------------------*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+{div#slider figure img { width: 20%; float: left;height: 283px; }
+    /*.breif{display: none}*/
+    #slider{height: 283px!important;}
+.reservation{display: none;}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    .reservation{display: none;}
+}
