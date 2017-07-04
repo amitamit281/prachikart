@@ -2,7 +2,7 @@
 
  body {
      background: #D9EFFE url("http://codepen.io/images/classy_fabric.png");
-     font-family: 'Raleway';}
+     font-family: 'sans-serif';}
 
 h2{font-family: Raleway;}
  .row
@@ -81,6 +81,7 @@ div#slider figure {
 {
 	color: white!important;
 }
+.container>.navbar-header{margin: 0px;}
 .dropdown-menu>li>a{color: #000000 !important;}
 .nav>li>a
 {
@@ -114,7 +115,7 @@ div#slider figure {
 .margin-top-14{margin-top: 14%;}
 .card-block{padding:1.25em;}
 .breif{margin-top: 12px;padding: 3%;color: #6d6d6d;}
-.card > img{margin-bottom: 3%;}
+.card > img{margin-bottom: 3%; border-radius:5% }
 .features{    background-color:  rgb(162, 107, 126);font-family: sans-serif;}
 .trusted > div {
     /*color: #8e8e8e;*/
@@ -128,14 +129,137 @@ div#slider figure {
     padding: 2%;
 }
 .trusted > h2 {color: #00689c;}
+.trusted{padding: 3% 0;}
+.input:focus{outline: none;}
+/*----------------contact---------------------*/
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
 
+.login-wrap{
+    width:100%;
+    margin:auto;
+    /*max-width:525px;*/
+    min-height:423px;
+    position:relative;
+    background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+    width:100%;
+    height:100%;
+    position:absolute;
+    padding:3%;
+    background:rgba(40,57,101,.9);
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+    display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+    text-transform:uppercase;
+}
+.login-html .tab{
+    font-size:22px;
+    margin-right:15px;
+    padding-bottom:5px;
+    margin:0 15px 10px 0;
+    display:inline-block;
+    border-bottom:2px solid ;
+    border-color: cornflowerblue;
+
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+    color:#fff;
+    border-color:#1161ee;
+}
+.login-form{
+    min-height:345px;
+    position:relative;
+    perspective:1000px;
+    transform-style:preserve-3d;
+}
+.login-form .group{
+    margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+    width:100%;
+    color:#fff;
+    display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+    border:none;
+    padding:15px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+    text-security:circle;
+    -webkit-text-security:circle;
+}
+.login-form .group .label{
+    color:#aaa;
+    font-size:12px;
+}
+.login-form .group .button{
+    background:#337ab7;
+}
+.login-form .group label .icon{
+    width:15px;
+    height:15px;
+    border-radius:2px;
+    position:relative;
+    display:inline-block;
+    background:rgba(255,255,255,.1);
+}
+/*.login-form .group label .icon:before,*/
+/*.login-form .group label .icon:after{*/
+    /*content:'';*/
+    /*width:10px;*/
+    /*height:2px;*/
+    /*background:#fff;*/
+    /*position:absolute;*/
+    /*transition:all .2s ease-in-out 0s;*/
+/*}*/
+/*.login-form .group label .icon:before{*/
+    /*left:3px;*/
+    /*width:5px;*/
+    /*bottom:6px;*/
+    /*transform:scale(0) rotate(0);*/
+/*}*/
+/*.login-form .group label .icon:after{*/
+    /*top:6px;*/
+    /*right:0;*/
+    /*transform:scale(0) rotate(0);*/
+/*}*/
+
+textarea{height: 225px;}
+.foot-lnk{
+    text-align:center;
+}
+.padding-btn{    padding: 0 12% 0 68%;}
+.sign-in-htm{padding: 0 6%;}
 /*----------Responsive------------------*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
 {div#slider figure img { width: 20%; float: left;height: 283px; }
     /*.breif{display: none}*/
     #slider{height: 283px!important;}
 .reservation{display: none;}
+    .login-wrap{min-height: 642px;}
+    .padding-btn{padding: 0 10%; }
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
     .reservation{display: none;}
+    .login-wrap{min-height: 642px;}
+    .padding-btn {
+        padding: 0 26% 0 29%;
+    }
 }
