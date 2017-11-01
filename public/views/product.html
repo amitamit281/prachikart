@@ -9,21 +9,22 @@
     <div class="col-md-4 prod_table" style="color:#fff">Search Category
         <input ng-model="filterParams.nameSearch" placeholder="Name "/></div>
 
-    <div class="col-md-4 prod_table" style="color:#fff">Sort Order
-        <select class="btn btn-default dropdown-toggle" ng-model="filterParams.order">
+    <div class="col-md-4 prod_table" style="color:#fff"><span>Sort Order</span>
+        <select class="btn btn-default dropdown-toggle col-md-4" ng-model="filterParams.order">
             <!--<option value="" selected>Select</option>-->
             <option value="name">Name</option>
             <option value="list">List</option>
             <option value="price">Price</option>
         </select>
     </div>
-    <div class="col-md-4 prod_table" style="color:#fff"> Price Range
+    <div class="col-md-4 prod_table" style="color:#fff"><span>Price Range</span>
         <!--<select class="btn btn-default dropdown-toggle" id="priceRange"-->
                 <!--ng-options="opt as opt for opt in priceRangeDisplayOptions" ng-change="filterByPriceRange()"-->
                 <!--ng-model="priceRange">-->
-<select  class="btn btn-default dropdown-toggle" id="priceRange" ng-options="opt as opt for opt in priceRangeDisplayOptions" ng-change="filterByPriceRange()" ng-model="priceRange">
+
+<select  class="btn btn-default dropdown-toggle col-md-4" id="priceRange" ng-options="opt as opt for opt in priceRangeDisplayOptions" ng-change="filterByPriceRange()" ng-model="priceRange">
 </select>
-        </select>
+
     </div>
 
     <div class="col-md-12">

@@ -54,6 +54,7 @@ div#slider figure {
   font-size: 0;
   animation: 20s slidy infinite; 
 }
+.prod_table{color:#000!important;}
 .prod_table > input {color: #000;}
 .user-image
 {
@@ -94,7 +95,7 @@ div#slider figure {
 }
 .page-content
 {
-	color: white;
+	color: #000;
 }
 .color-white
 {
@@ -139,8 +140,8 @@ div#slider figure {
 /*----------------contact---------------------*/
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both;display:block}
-a{color:inherit;text-decoration:none}
-
+/*a{color:inherit;text-decoration:none}*/
+table{color:#000;}
 .login-wrap{
     width:100%;
     margin:auto;
